@@ -23,6 +23,15 @@ public class FacebookPage {
     @FindBy(name = "login")
     public WebElement loginSayfasiLoginButonu;
 
+    @FindBy (xpath = "//*[@data-testid='open-registration-form-button']")
+    public WebElement createNewAccountButonu;
+
+    @FindBy (xpath = "//input[@name='firstname']")
+    public WebElement kayitOlusturSayfasiFirstnameKutusu;
+
+    @FindBy (xpath = "//button[@name='websubmit']")
+    public WebElement kayitOlusturSayfasiSignUpButonu;
+
 
 
 }

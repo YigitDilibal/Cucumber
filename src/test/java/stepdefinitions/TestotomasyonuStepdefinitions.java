@@ -127,4 +127,45 @@ public class TestotomasyonuStepdefinitions {
     public void senkronizasyonIcinSaniyeBekler(int beklemeSuresi) {
         ReusableMethods.bekle(beklemeSuresi);
     }
+
+
+
+    @Then("anasayfadaki account linkine tiklar")
+    public void anasayfadakiAccountLinkineTiklar() {
+        testotomasyonuPage.accountLinki.click();
+    }
+
+    @When("email kutusuna configuration dosyasindaki {string} degerini girer")
+    public void emailKutusunaConfigurationDosyasindakiDegeriniGirer(String configurationdakiEmail) {
+        testotomasyonuPage.loginSayfasiEmailKutusu
+                .sendKeys(ConfigReader.getProperty(configurationdakiEmail));
+    }
+
+    @And("password kutusuna configuration dosyasindaki {string} degerini girer")
+    public void passwordKutusunaConfigurationDosyasindakiDegeriniGirer(String configurationdakiPassword) {
+        testotomasyonuPage.loginSayfasiPasswordKutusu
+                .sendKeys(ConfigReader.getProperty(configurationdakiPassword));
+    }
+
+    @Then("login sayfasindaki signIn butonuna basar")
+    public void loginSayfasindakiSignInButonunaBasar() {
+
+        testotomasyonuPage.loginSayfasiSubmitButonu.click();
+    }
+
+    @And("basarili sekilde giris yapilabildigini test eder")
+    public void basariliSekildeGirisYapilabildiginiTestEder() {
+        Assertions.assertTrue(testotomasyonuPage.logoutButonu.isDisplayed());
+    }
+
+    @Then("logout butonuna basar")
+    public void logoutButonunaBasar() {
+        testotomasyonuPage.logoutButonu.click();
+    }
+
+
+    @Then("basarili sekilde giris yapilamadigini test eder")
+    public void basariliSekildeGirisYapilamadiginiTestEder() {
+        Assertions.assertTrue(testotomasyonuPage.loginSayfasiSubmitButonu.isDisplayed());
+    }
 }
