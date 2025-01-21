@@ -168,4 +168,34 @@ public class TestotomasyonuStepdefinitions {
     public void basariliSekildeGirisYapilamadiginiTestEder() {
         Assertions.assertTrue(testotomasyonuPage.loginSayfasiSubmitButonu.isDisplayed());
     }
+
+
+
+    @Then("email kutusuna listede verilen {string} degerini girer")
+    public void emailKutusunaListedeVerilenDegeriniGirer(String verilenListedekiEmail) {
+        testotomasyonuPage.loginSayfasiEmailKutusu.sendKeys(verilenListedekiEmail);
+    }
+
+    @And("password kutusuna listede verilen {string} degerini girer")
+    public void passwordKutusunaListedeVerilenDegeriniGirer(String verilenListedekiPassword) {
+        testotomasyonuPage.loginSayfasiPasswordKutusu.sendKeys(verilenListedekiPassword);
+    }
+
+    @Then("arama sonucunda {string} veya daha fazla urun bulunabildigini test eder")
+    public void aramaSonucundaVeyaDahaFazlaUrunBulunabildiginiTestEder(String belirtilenMiktarStr) {
+
+        int belirtilenMiktar = Integer.parseInt(belirtilenMiktarStr);
+
+        String aramaSonucYazisi = testotomasyonuPage.aramaSonucYaziElementi.getText();
+        // "3 Products Found"
+
+        aramaSonucYazisi = aramaSonucYazisi.replaceAll("\\D",""); // 3
+
+        int actualBulunanUrunSayisi = Integer.parseInt(aramaSonucYazisi);
+
+
+        Assertions.assertTrue(actualBulunanUrunSayisi >= belirtilenMiktar);
+
+    }
+
 }
