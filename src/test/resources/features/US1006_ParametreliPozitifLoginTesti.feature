@@ -1,5 +1,6 @@
 
   Feature: US1006 kullanici gecerli bilgilerle giris yapar
+    @paralel1
 
     Scenario: TC10 kullanici configuration dosyasindaki gecerli datalarla giris yapabilmeli
 

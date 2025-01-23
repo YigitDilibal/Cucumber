@@ -1,5 +1,5 @@
 Feature: US1009 Saucedemo alisveris sepeti testi
-@Rapor
+  @paralel2
   Scenario: TC15 Kullanici sepete dogru urun eklendigini test edebilmeli
 
     Given kullanici "sauceUrl" anasayfaya gider

@@ -1,5 +1,8 @@
 
+
   Feature: US1004 Kullanici background ile bastaki tekrarlardan kurtulur
+
+
 
     Background: ortak baslangic adimlari
       Given kullanici testotomasyonu anasayfaya gider

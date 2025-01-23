@@ -1,6 +1,6 @@
 Feature: US1014 excelde verilen urunler aratilir ve sonuclar kaydedilir
 
-  Scenario Outline: TC20 kullanici excelde verilen urunlerin
+  Scenario Outline: TC21 kullanici excelde verilen urunlerin
   belirlenen miktar veya daha fazla bulundugunu test edebilmeli
   ve bulunan sonuc sayisini tarih ile kaydeder
 

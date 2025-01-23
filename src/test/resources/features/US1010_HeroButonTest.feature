@@ -1,5 +1,6 @@
 
 Feature: US1010 Kullanici butonlari kullanir
+    @paralel2
 
     Scenario: TC16 Kullanici butonlarin gorundugunu ve calistigini test eder
 

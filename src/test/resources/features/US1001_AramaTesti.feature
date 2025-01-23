@@ -1,6 +1,8 @@
 
 Feature: US1001 Kullanici testotomasyonu sayfasinda arama yapar
 
+  @paralel1
+
   Scenario: TC01 kullanici phone arattiginda sonuc bulabilmeli
 
     Given kullanici testotomasyonu anasayfaya gider

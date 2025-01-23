@@ -1,5 +1,6 @@
 
   Feature: US1007 Kullanici yanlis bilgilerle giris yapamaz
+    @paralel2
 
     Scenario: TC11 Kullanici gecersiz email ve gecerli password ile giris yapamamali
 

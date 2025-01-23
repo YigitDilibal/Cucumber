@@ -1,6 +1,8 @@
 
   Feature: US1005 Kullanici parametre olarak verilen urunu aratir
 
+    @paralel1
+
 
     Scenario: TC09 Kullanici verilen her urunu tek step ile aratabilmeli
 
