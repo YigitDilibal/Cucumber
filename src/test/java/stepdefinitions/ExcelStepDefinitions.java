@@ -15,6 +15,8 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 
@@ -93,4 +95,41 @@ public class ExcelStepDefinitions {
         workbook.close();
 
     }
+
+    @Then("bulunan sonuc sayisini {string} daki {int}.sutuna, tarihi de {int}.sutuna yazar")
+    public void bulunan_sonuc_sayisini_daki_sutuna_tarihi_de_sutuna_yazar(String satirNoStr, Integer sonucSutunNo, Integer tarihSutunNo) throws IOException {
+
+        String excelDosyaYolu = "src/test/resources/urunListesi.xlsx";
+        FileInputStream fileInputStream = new FileInputStream(excelDosyaYolu);
+        Workbook workbook = WorkbookFactory.create(fileInputStream);
+        sheet1 = workbook.getSheet("Sheet1");
+
+        int satirNo = Integer.parseInt(satirNoStr);
+
+        sheet1.getRow(satirNo-1)
+                .createCell(sonucSutunNo-1)
+                .setCellValue(bulunanSonucSayisi);
+
+        LocalDateTime localDateTime = LocalDateTime.now();
+        DateTimeFormatter format1 = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
+        sheet1.getRow(satirNo-1)
+                .createCell(tarihSutunNo-1)
+                .setCellValue(localDateTime.format(format1));
+
+        // Normalde kaydetme islemini, tum satirlari bitirdikten sonra yapariz
+        // ancak burada herbir satir icin kod sifirdan calisacagi icin
+        // her satirda yapilan islemi kayit altina almaliyiz
+
+        FileOutputStream fileOutputStream = new FileOutputStream(excelDosyaYolu);
+        workbook.write(fileOutputStream);
+
+        fileOutputStream.close();
+        workbook.close();
+        fileInputStream.close();
+
+    }
+
+
+
 }

@@ -1,6 +1,7 @@
 
   Feature: US1002 Kullanici istedigi urunu sepete ekler
 
+
     Scenario: TC04 Kullanici arattigi urunu sepete ekleyebilmeli
 
       Given kullanici testotomasyonu anasayfaya gider
@@ -12,4 +13,3 @@
       When urunu sepete ekler
       And your cart linkine tiklar
       Then sepetteki urun ismi ile daha once kaydettigi ismin ayni oldugunu test eder
-      And sayfayi kapatir

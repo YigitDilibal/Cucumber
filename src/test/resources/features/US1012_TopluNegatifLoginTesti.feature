@@ -9,7 +9,6 @@ Feature: US1012 verilen gecersiz bilgilerle giris yapilamaz.
     And password kutusuna listede verilen "<verilenPassword>" degerini girer
     And login sayfasindaki signIn butonuna basar
     Then basarili sekilde giris yapilamadigini test eder
-    And sayfayi kapatir
 
 
 

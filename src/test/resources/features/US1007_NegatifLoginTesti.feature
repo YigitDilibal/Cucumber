@@ -9,7 +9,6 @@
       And password kutusuna configuration dosyasindaki "toGecerliPassword" degerini girer
       And login sayfasindaki signIn butonuna basar
       Then basarili sekilde giris yapilamadigini test eder
-      And sayfayi kapatir
 
 
       Scenario: TC12 Kullanici gecerli email ve gecersiz password ile giris yapamamali
@@ -20,7 +19,6 @@
         And password kutusuna configuration dosyasindaki "toGecersizPassword" degerini girer
         And login sayfasindaki signIn butonuna basar
         Then basarili sekilde giris yapilamadigini test eder
-        And sayfayi kapatir
 
     Scenario: TC12 Kullanici gecersiz email ve gecersiz password ile giris yapamamali
 
@@ -30,4 +28,3 @@
       And password kutusuna configuration dosyasindaki "toGecersizPassword" degerini girer
       And login sayfasindaki signIn butonuna basar
       Then basarili sekilde giris yapilamadigini test eder
-      And sayfayi kapatir

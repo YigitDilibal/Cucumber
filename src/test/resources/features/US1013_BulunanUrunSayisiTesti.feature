@@ -7,7 +7,6 @@ Feature: US1013 verilen urunler yeterince bulunabilmeli
     Given kullanici "toUrl" anasayfaya gider
     When arama kutusuna "<aranacakKelime>" yazip aratir
     Then arama sonucunda "<belirlenenMiktar>" veya daha fazla urun bulunabildigini test eder
-    And sayfayi kapatir
 
 
 

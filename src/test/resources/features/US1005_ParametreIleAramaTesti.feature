@@ -10,4 +10,3 @@
       And  aratma sonuclarindan ilk urunu tiklar
       And senkronizasyon icin 3 saniye bekler
       Then acilan urun sayfasindaki urun isminde case sensitive olmadan "bag" bulundugunu test eder
-      And sayfayi kapatir

@@ -12,4 +12,3 @@
       And basarili sekilde giris yapilabildigini test eder
       And senkronizasyon icin 2 saniye bekler
       Then logout butonuna basar
-      And sayfayi kapatir
