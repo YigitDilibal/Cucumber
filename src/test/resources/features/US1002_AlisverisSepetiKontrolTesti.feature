@@ -1,6 +1,7 @@
 
   Feature: US1002 Kullanici istedigi urunu sepete ekler
 
+    @wip
 
     Scenario: TC04 Kullanici arattigi urunu sepete ekleyebilmeli
 

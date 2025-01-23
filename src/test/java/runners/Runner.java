@@ -12,13 +12,13 @@ import org.junit.platform.suite.api.Suite;
 @ConfigurationParameter(key = Constants.GLUE_PROPERTY_NAME,value = "stepdefinitions")
 @ConfigurationParameter(key = Constants.FILTER_TAGS_PROPERTY_NAME,value = "@wip")
 @ConfigurationParameter(key = Constants.EXECUTION_DRY_RUN_PROPERTY_NAME,value = "false")
-@ConfigurationParameter(key = Constants.PLUGIN_PROPERTY_NAME,value = "pretty, html:target/cucumber-report/HtmlReport.html")
-//@ConfigurationParameter(key = Constants.PLUGIN_PROPERTY_NAME,value = "pretty, json:target/json-reports/cucumberRapor.json")
+//@ConfigurationParameter(key = Constants.PLUGIN_PROPERTY_NAME,value = "pretty, html:target/cucumber-report/HtmlReport.html")
+@ConfigurationParameter(key = Constants.PLUGIN_PROPERTY_NAME,value = "pretty, json:target/json-reports/cucumberRapor.json")
 //@ConfigurationParameter(key = Constants.PLUGIN_PROPERTY_NAME,value = "pretty, junit:target/xml-report/cucumber.xml")
 
 public class Runner {
 
-      /*
+     /*
             Runner class'i bos bi class'dir
             class body'sinde hicbir kod yoktur
 
@@ -64,6 +64,35 @@ public class Runner {
             SADECE eksik adim kontrolu yapar
             eksik adim varsa, o step'lerin java method'larini olusturur
             eksik adim yoksa, bunu vurgulamak icin, kodlari calistirmadan "test passed" der
+
+
+            PLUGIN_PROPERTY_NAME,value = "pretty, html:target/cucumber-report/HtmlReport.html
+            HTML raporlar ureten plugin'i calistirir
+            ANCCCAAAAK bu satir Runner class'inda oldugu icin
+            Runner ile calistirilan feature'lar icin html rapor olusturur
+            Feature veya Scenario yanindaki yesil tus ile calistirilirsa rapor olusturmaz
+
+            dosya yolu olarak target/cucumber-report/HtmlReport.html girildiginden
+            bir degisiklik yapmazsak her seferinde ayni dosyanin uzerine kaydeder
+            ozel olarak saklamak istedigimiz raporlar olursa
+            HtmlReport yerine istenen isim yazilabilir
+            Eger Farkli bir klasor altinda raporlari kaydetmek isterseniz
+            target/cucumber-report/  kismi degistirilebilir
+
+            Diger raporlar da PLUGIN_PROPERTY_NAME olarak tanimlandigindan
+            Html, json veya xml raporlarindan hangisini istiyorsak
+            o satir yorumdan cikarilmali,
+            diger rapor satirlari yorum yapilmalidir
+
+            Diger json ve xml raporlari
+            gorsel acidan bizim icin begenilmeyebilir
+            ANCAAKKK eger her hangi bir durumda
+            raporumuzdaki data'lar bizden istenirse
+            json veya xml olarak istenebilir
+            biz de bu raporlari olusturup
+            isteyen kislere yollayabiliriz
+
+
 
          */
 
