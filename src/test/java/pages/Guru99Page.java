@@ -19,4 +19,5 @@ public class Guru99Page {
     public List<WebElement> sirketIsimElementleriList;
 
 
+
 }

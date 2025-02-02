@@ -19,6 +19,7 @@ public class TestotomasyonuStepdefinitions {
         Driver.getDriver().get(ConfigReader.getProperty("toUrl"));
     }
 
+
     @When("arama kutusuna phone yazip aratir")
     public void arama_kutusuna_phone_yazip_aratir() {
         testotomasyonuPage.aramaKutusu.sendKeys("phone" + Keys.ENTER);
@@ -51,6 +52,7 @@ public class TestotomasyonuStepdefinitions {
 
         Assertions.assertEquals(expectedSonucYazisi,actualSonucYazisi);
     }
+
 
 
 
@@ -99,6 +101,7 @@ public class TestotomasyonuStepdefinitions {
     }
 
 
+
     @Then("sepetteki urun ismi ile daha once kaydettigi ismin case sensitive olmadan ayni oldugunu test eder")
     public void sepettekiUrunIsmiIleDahaOnceKaydettigiIsminCaseSensitiveOlmadanAyniOldugunuTestEder() {
 
@@ -107,6 +110,7 @@ public class TestotomasyonuStepdefinitions {
 
         Assertions.assertEquals(expectedUrunIsmi,actualUrunIsmi);
     }
+
 
 
 

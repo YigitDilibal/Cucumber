@@ -21,6 +21,7 @@ Feature:US1016 kullanici butonun erisilebilir olmasini bekler
   Scenario: TC24 Kullanici buton renk degistirinceye kadar bekleyip
   rengin degistigini test edebilmeli
 
+
     Given kullanici "demoqaUrl" anasayfaya gider
     Then Elements menusunu acar
     And Dynamic Properties menusune gider

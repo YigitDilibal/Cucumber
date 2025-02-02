@@ -29,4 +29,5 @@ public class HeroStepdefinitions {
     public void addRemoveElementsYazisininGorunurOldugunuTestEder() {
         Assertions.assertTrue(heroPage.addRemoveElements.isDisplayed());
     }
+
 }

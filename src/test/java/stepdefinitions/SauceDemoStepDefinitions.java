@@ -19,6 +19,7 @@ public class SauceDemoStepDefinitions {
         sauceDemoPage.usernameKutusu.sendKeys(girilenUsername);
     }
 
+
     @And("saucedemo password kutusuna {string} yazar")
     public void saucedemoPasswordKutusunaYazar(String girilenPassword) {
         sauceDemoPage.passwordKutusu.sendKeys(girilenPassword);
