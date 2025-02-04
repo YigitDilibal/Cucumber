@@ -14,6 +14,7 @@ public class TestotomasyonuPage {
     }
 
 
+
     @FindBy(id = "global-search")
     public WebElement aramaKutusu;
 

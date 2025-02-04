@@ -37,6 +37,7 @@ public class Hooks {
         ozel olarak Hooks diye isimlendirdigimiz class'a kaydedecegiz
      */
 
+
     @After // her Scenario'dan sonra calisacak
     public void tearDown(Scenario scenario) {
         ReusableMethods.bekle(1);
